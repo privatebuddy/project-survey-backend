@@ -91,4 +91,7 @@ typings/
 # IDEA
 .idea/
 
+# Config
+keys.js
+
 # End of https://www.gitignore.io/api/node
