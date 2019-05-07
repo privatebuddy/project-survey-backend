@@ -7,11 +7,15 @@ const logger = require('morgan');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const authRouter = require('./routes/authentication');
+const mongoose = require('mongoose');
+const keys = require('./config/keys');
 
 require('./services/passport');
 const app = express();
 
 const PORT = process.env.PORT || 5000;
+
+mongoose.connect(keys.mongoURI);
 
 app.listen(PORT);
 // view engine setup
