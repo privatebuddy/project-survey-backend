@@ -10,7 +10,10 @@ const authRouter = require('./routes/authentication');
 const mongoose = require('mongoose');
 const keys = require('./config/keys');
 
+require('./models/User');
 require('./services/passport');
+
+
 const app = express();
 
 const PORT = process.env.PORT || 5000;
